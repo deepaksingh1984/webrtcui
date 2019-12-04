@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conference</title>
+    <link rel="shortcut icon" href="dist/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="node_modules/remodal/dist/remodal-default-theme.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <style>
+        .acco-title>a {
+            color: #fff;
+        }
+        
+        .acco-title>a .fa:before {
+            float: right !important;
+            font-family: FontAwesome;
+            content: "\f068";
+            padding-right: 5px;
+        }
+        
+        .acco-title>a.collapsed .fa:before {
+            float: right !important;
+            content: "\f067";
+        }
+        
+        .acco-title>a.collapse .fa:before {
+            float: right !important;
+            content: "\f068";
+        }
+        
+        .acco-title>a:hover,
+        .acco-title>a:active,
+        .acco-title>a:focus {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="margin-bottom: 5rem;">
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-blue">
+            <a class="navbar-brand" href="#">
+                <img src="dist/img/amplechat-logo.png" alt="AmpleChat Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+    </header>
+    <!-- Fixed navbar Ends-->
+    <!-- main contents starts -->
+    <main role="main" class="container-fluid mt-lg-5">
+        <div class="row">
+            <div class="col-2 message-view chat-profile-view chat-sidebar" id="chat_sidebar">
+                <div class="chat-window video-window">
+                    <div class="tab-content chat-contents">
+                        <div class="content-full tab-pane show active" id="chats_tab">
+                            <div class="chat-window">
+                                <div class="col-12 text-center justify-content-center remote-video remote">
+                                    <div class="v-header">
+                                        <span style="font-size:12px; padding: 5px;" class="pull-left">Farook Afsari</span>
+                                        <span style="font-size:12px; padding: 5px;" class="pull-right">
+                                        <i class="fa fa-minus-circle" data-toggle="tooltip" data-placement="left" title="Close Video"></i>
+                                        </span>
+                                    </div>
+                                    <div class="remote">
+                                        <video id="v3" style="width:100%;">
+                                            <source src="dist/video/movie.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <span class="controls">
+                                        <small>
+                                            <i class="fa fa-microphone-slash m-2" data-toggle="tooltip" data-placement="bottom" title="Mute Audio"></i>
+                                            <i class="fa fa-stop-circle m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Record"></i>
+                                            <i class="fa fa-camera m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Snap Shot"></i>
+                                            <i class="fa fa-arrows-alt m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Full Screen"></i>
+                                            <i class="fa fa-hand-pointer-o m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Pointer"></i>
+                                        </small>
+                                        <small>
+                                            	<span class="zone"></span>
+                                    <span class="devider"> | </span>
+                                    <span class="crdate"></span>
+                                    </small>
+                                    </span>
+                                </div>
+                                <div class="col-12 text-center justify-content-center remote-video remote mt-2">
+                                    <div class="v-header">
+                                        <span style="font-size:12px; padding: 5px;" class="pull-left">Farook Afsari</span>
+                                        <span style="font-size:12px; padding: 5px;" class="pull-right">
+                                        <i class="fa fa-minus-circle" data-toggle="tooltip" data-placement="left" title="Close Video"></i>
+                                        </span>
+                                    </div>
+                                    <div class="remote">
+                                        <video id="v3" style="width:100%;">
+                                            <source src="dist/video/movie.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <span class="controls">
+                                        <small>
+                                            <i class="fa fa-microphone-slash m-2" data-toggle="tooltip" data-placement="bottom" title="Mute Audio"></i>
+                                            <i class="fa fa-stop-circle m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Record"></i>
+                                            <i class="fa fa-camera m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Snap Shot"></i>
+                                            <i class="fa fa-arrows-alt m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Full Screen"></i>
+                                            <i class="fa fa-hand-pointer-o m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Pointer"></i>
+                                        </small>
+                                        <small>
+                                            	<span class="zone"></span>
+                                    <span class="devider"> | </span>
+                                    <span class="crdate"></span>
+                                    </small>
+                                    </span>
+                                </div>
+                                <div class="col-12 text-center justify-content-center remote-video remote mt-2">
+                                    <div class="v-header">
+                                        <span style="font-size:12px; padding: 5px;" class="pull-left">Farook Afsari</span>
+                                        <span style="font-size:12px; padding: 5px;" class="pull-right">
+                                        <i class="fa fa-minus-circle" data-toggle="tooltip" data-placement="left" title="Close Video"></i>
+                                        </span>
+                                    </div>
+                                    <div class="remote">
+                                        <video id="v5" style="width:100%;">
+                                            <source src="dist/video/movie.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <span class="controls">
+                                        <small>
+                                            <i class="fa fa-microphone-slash m-2" data-toggle="tooltip" data-placement="bottom" title="Mute Audio"></i>
+                                            <i class="fa fa-stop-circle m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Record"></i>
+                                            <i class="fa fa-camera m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Snap Shot"></i>
+                                            <i class="fa fa-arrows-alt m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Full Screen"></i>
+                                            <i class="fa fa-hand-pointer-o m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Pointer"></i>
+                                        </small>
+                                        <small>
+                                            	<span class="zone"></span>
+                                    <span class="devider"> | </span>
+                                    <span class="crdate"></span>
+                                    </small>
+                                    </span>
+                                </div>
+                                <div class="col-12 text-center justify-content-center remote-video remote  mt-2 mb-5">
+                                    <div class="v-header">
+                                        <span style="font-size:12px; padding: 5px;" class="pull-left">Farook Afsari</span>
+                                        <span style="font-size:12px; padding: 5px;" class="pull-right">
+                                        <i class="fa fa-minus-circle" data-toggle="tooltip" data-placement="left" title="Close Video"></i>
+                                        </span>
+                                    </div>
+                                    <div class="remote">
+                                        <video id="v6" style="width:100%;">
+                                            <source src="dist/video/movie.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <span class="controls">
+                                        <small>
+                                            <i class="fa fa-microphone-slash m-2" data-toggle="tooltip" data-placement="bottom" title="Mute Audio"></i>
+                                            <i class="fa fa-stop-circle m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Record"></i>
+                                            <i class="fa fa-camera m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Snap Shot"></i>
+                                            <i class="fa fa-arrows-alt m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Full Screen"></i>
+                                            <i class="fa fa-hand-pointer-o m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Pointer"></i>
+                                        </small>
+                                        <small>
+                                            	<span class="zone"></span>
+                                    <span class="devider"> | </span>
+                                    <span class="crdate"></span>
+                                    </small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-8">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header collapsed" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h5 class="mb-0">
+                                Draw
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-1 text-center" style="background-color:#fff; height:67vh">
+                                        <div class="col-lg-12 pt-4">
+                                            <span class="amplechat-icon-pencil" data-toggle="tooltip" data-placement="right" title="Pencil"></span>
+                                        </div>
+                                        <div class="col-lg-12  pt-4">
+                                            <span class="amplechat-icon-eraser" data-toggle="tooltip" data-placement="right" title="Eraser"></span>
+                                        </div>
+                                        <div class="col-lg-12 pt-4">
+                                            <span class="amplechat-icon-color-palette" data-toggle="tooltip" data-placement="right" title="Colors"></span>
+                                        </div>
+                                        <div class="col-lg-12 pt-4">
+                                            <i class="fa fa-minus fa-2x lineWidth" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Line Width"></i>
+                                        </div>
+                                        <div class="linBox hiddenClass"><input type="text" class="form-control" name="lineWidth"><button class="btn btn-primary set">Set</button></div>
+                                        <div class="col-lg-12 pt-4">
+                                            <i class="fa fa-floppy-o fa-2x savePaint" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Save"></i>
+                                        </div>
+                                        <div class="col-lg-12 pt-4">
+                                            <i class="fa fa-trash-o fa-2x delete-icon" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Delete"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-11">
+                                        <div class="draw-section">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header collapsed" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h5 class="mb-0">
+                                File Share
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div id="romote-file-head" class="col-12">
+                                        <div class="row remote-color">
+                                            <div class="col-lg-8 p-3">
+                                                <h5>Farook's Files Shared</h5>
+                                            </div>
+                                            <div class="text-right col-lg-4 col-card">
+                                                <ul style="display: flex;list-style: none;float: right;margin-bottom: 0px;">
+                                                    <!-- <li id="FullScreen1" class="m-3 expand-show1" data-toggle="tooltip" data-placement="top" title="Full Screen">
+                                                        <i class="fa fa-arrows-alt"></i>
+                                                    </li> -->
+                                                    <!--<li class="m-3" id="rotate1" data-toggle="tooltip" data-placement="top" title="Rotate">
+                                                        <i class="fa fa-repeat"></i>
+                                                    </li>-->
+                                                    <li class="m-3 acco-title" data-toggle="tooltip" data-placement="top" title="Minimize">
+                                                        <a href="#" id="usershare1" data-toggle="collapse" data-target="#usershare1" style="color:#000;">
+                                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div id="usershare1" class="collapse show">
+                                            <div class="row p-2">
+                                                <div class="col-12" style="height:400px;overflow-y:scroll;">
+                                                    <div class="row">
+                                                        <div class="text-left col-lg-8">
+                                                            <small><strong>File name:</strong> blog-01.jpg</small>
+                                                        </div>
+                                                        <div class="text-right col-lg-4 file-share-header">
+                                                            <ul style="display: flex;list-style: none;float: right;margin-bottom: 0px;">
+                                                                <li class="m-1" data-toggle="tooltip" data-placement="top" title="Save">
+                                                                    <i class="fa fa-save"></i>
+                                                                </li>
+                                                                <li class="m-1" data-toggle="tooltip" data-placement="top" title="Download">
+                                                                    <i class="fa fa-download"></i>
+                                                                </li>
+                                                                <li class="m-1" data-toggle="tooltip" data-placement="top" title="hide">
+                                                                    <i class="fa fa-eye-slash"></i>
+                                                                </li>
+                                                                <li class="m-1" data-toggle="tooltip" data-placement="top" title="Rotate">
+                                                                    <i class="fa fa-repeat"></i>
+                                                                </li>
+                                                                <li class="m-1" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                    <i class="fa fa-trash"></i>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <img src="dist/video/p2p.png" style="width:100%;" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header collapsed" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h5 class="mb-0">
+                                Screen Share
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12" style="height:500px; padding:5px; overflow-y:scroll; text-align:center;">
+                                        <div class="showScreen" style="height:400px;">
+                                            <img src="dist/video/screen.png" style="width:auto; height:100%;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 message-view chat-profile-view chat-sidebar" id="chat_sidebar">
+                <div class="chat-window video-window">
+                    <div class="tab-content chat-contents">
+                        <div class="content-full tab-pane show active" id="chats_tab">
+                            <div class="chat-window">
+                                <div class="col-12 text-center justify-content-center remote-video remote">
+                                    <div class="v-header">
+                                        <span style="font-size:12px; padding: 5px;" class="pull-left">Farook Afsari</span>
+                                        <span style="font-size:12px; padding: 5px;" class="pull-right">
+                                        <i class="fa fa-minus-circle" data-toggle="tooltip" data-placement="left" title="Close Video"></i>
+                                        </span>
+                                    </div>
+                                    <div class="remote">
+                                        <video id="v1" style="width:100%;">
+                                            <source src="dist/video/movie.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <span class="controls">
+                                        <small>
+                                            <i class="fa fa-microphone-slash m-2" data-toggle="tooltip" data-placement="bottom" title="Mute Audio"></i>
+                                            <i class="fa fa-stop-circle m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Record"></i>
+                                            <i class="fa fa-camera m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Snap Shot"></i>
+                                            <i class="fa fa-arrows-alt m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Full Screen"></i>
+                                            <i class="fa fa-hand-pointer-o m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Pointer"></i>
+                                        </small>
+                                        <small>
+                                            	<span class="zone"></span>
+                                    <span class="devider"> | </span>
+                                    <span class="crdate"></span>
+                                    </small>
+                                    </span>
+                                </div>
+                                <div class="col-12 text-center justify-content-center local-video local mt-2">
+                                    <div class="v-header">
+                                        <div style="font-size:12px; padding: 5px;" class="pull-left">Deepak Singh</div>
+                                        <div style="font-size:12px; padding: 5px;" class="pull-right">
+                                            <i class="fa fa-minus-circle" data-toggle="tooltip" data-placement="left" title="Close Video"></i>
+                                        </div>
+                                    </div>
+                                    <div class="local">
+                                        <video id="v2" style="width:100%;">
+                                                <source src="dist/video/movie.mp4" type="video/mp4">
+                                            </video>
+                                    </div>
+                                    <span class="controls">
+                                            <small>
+                                                <i class="fa fa-microphone-slash m-2" data-toggle="tooltip" data-placement="bottom" title="Mute Audio"></i>
+                                                <i class="fa fa-stop-circle m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Record"></i>
+                                                <i class="fa fa-camera m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Snap Shot"></i>
+                                                <i class="fa fa-arrows-alt m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Full Screen"></i>
+                                                <i class="fa fa-hand-pointer-o m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Pointer"></i>
+                                            </small>
+                                            <small>
+                                            	<span class="zone"></span>
+                                    <span class="devider"> | </span>
+                                    <span class="crdate"></span>
+                                    </small>
+                                    </span>
+                                </div>
+                                <div class="col-12 text-center justify-content-center remote-video remote mt-2">
+                                    <div class="v-header">
+                                        <span style="font-size:12px; padding: 5px;" class="pull-left">Farook Afsari</span>
+                                        <span style="font-size:12px; padding: 5px;" class="pull-right">
+                                        <i class="fa fa-minus-circle" data-toggle="tooltip" data-placement="left" title="Close Video"></i>
+                                        </span>
+                                    </div>
+                                    <div class="remote">
+                                        <video id="v7" style="width:100%;">
+                                            <source src="dist/video/movie.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <span class="controls">
+                                        <small>
+                                            <i class="fa fa-microphone-slash m-2" data-toggle="tooltip" data-placement="bottom" title="Mute Audio"></i>
+                                            <i class="fa fa-stop-circle m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Record"></i>
+                                            <i class="fa fa-camera m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Snap Shot"></i>
+                                            <i class="fa fa-arrows-alt m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Full Screen"></i>
+                                            <i class="fa fa-hand-pointer-o m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Pointer"></i>
+                                        </small>
+                                        <small>
+                                            	<span class="zone"></span>
+                                    <span class="devider"> | </span>
+                                    <span class="crdate"></span>
+                                    </small>
+                                    </span>
+                                </div>
+                                <div class="col-12 text-center justify-content-center remote-video remote  mt-2 mb-5">
+                                    <div class="v-header">
+                                        <span style="font-size:12px; padding: 5px;" class="pull-left">Farook Afsari</span>
+                                        <span style="font-size:12px; padding: 5px;" class="pull-right">
+                                        <i class="fa fa-minus-circle" data-toggle="tooltip" data-placement="left" title="Close Video"></i>
+                                        </span>
+                                    </div>
+                                    <div class="remote">
+                                        <video id="v8" style="width:100%;">
+                                            <source src="dist/video/movie.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <span class="controls">
+                                        <small>
+                                            <i class="fa fa-microphone-slash m-2" data-toggle="tooltip" data-placement="bottom" title="Mute Audio"></i>
+                                            <i class="fa fa-stop-circle m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Record"></i>
+                                            <i class="fa fa-camera m-2" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Snap Shot"></i>
+                                            <i class="fa fa-arrows-alt m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Full Screen"></i>
+                                            <i class="fa fa-hand-pointer-o m-2 fullscreen" ref="v1" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Pointer"></i>
+                                        </small>
+                                        <small>
+                                            	<span class="zone"></span>
+                                    <span class="devider"> | </span>
+                                    <span class="crdate" onload="showTime()"></span>
+                                    </small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main content ends -->
+
+
+
+    <div class="clear"></div>
+    <!-- footer starts -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 timer">
+                    <span class="text-muted">Time : <time>00:00:00</time></span>
+                    <span class="text-muted crdatebotton"></span>
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-2 bottom-icons fileshare">
+                            <span class="amplechat-icon-file-share" data-toggle="tooltip" data-placement="top" title="File Share"></span>
+                        </div>
+                        <div class="col-2 bottom-icons screenShare">
+                            <span class="amplechat-icon-screen-sharing" data-toggle="tooltip" data-placement="top" title="Screen Share"></span>
+                        </div>
+                        <div class="col-2 bottom-icons drawTool">
+                            <span class="amplechat-icon-pencil" data-toggle="tooltip" data-placement="top" title="Draw"></span>
+                        </div>
+                        <div class="col-2 bottom-icons listenIn">
+                            <span data-remodal-target="listenin" data-toggle="tooltip" data-placement="top" title="Listen In">
+                                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="col-4 bottom-icons recordSession">
+                            <span data-toggle="tooltip" data-placement="top" title="Session Record">
+                                <i class="fa fa-stop-circle-o" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <span class="text-muted"><button class="btn btn-danger">End Call</button></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ends -->
+    <!-- chat box starts -->
+    <div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+        <i class="fa fa-comment-o" aria-hidden="true"></i>
+    </div>
+
+    <div class="chat-box">
+        <div class="chat-box-header">
+            ChatBot
+            <span class="chat-box-toggle"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+        <div class="chat-box-body">
+            <div class="chat-box-overlay">
+            </div>
+            <div class="chat-logs">
+
+            </div>
+            <!--chat-log -->
+        </div>
+        <div class="chat-input">
+            <form>
+                <input type="text" id="chat-input" placeholder="Type your message..." />
+                <button type="submit" class="chat-submit" id="chat-submit">
+                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                    </button>
+            </form>
+        </div>
+    </div>
+    <!-- chat box ends -->
+    <!--listenin modal starts-->
+    <div class="remodal" data-remodal-id="listenin" data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+        <a data-remodal-action="close" class="remodal-close"></a>
+        <form class="vldform addUser">
+            <span>LISTEN IN</span>
+            <input class="vldform__textbox" type="email" name="listen-in-email" placeholder="Email" id="listen-in-email" required>
+            <p class="forgot-error interror"></p>
+            <input class="vldform__textbox" type="text" name="listen-in-url" value="https://www.amplechat.com/demo/web-rtc-new-ui/p2p.html" readonly required>
+            <p class="forgot-error interror"></p>
+            <input class="vldform__button" type="button" id="forgot-password" value="Add User">
+        </form>
+    </div>
+    <!--listenin modal ends-->
+
+    <!-- scripts starts -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="dist/js/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/remodal/dist/remodal.min.js"></script>
+    <script src="dist/js/chatbox.js"></script>
+    <!-- scripts ends -->
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+            (function($) {
+                $.fn.drags = function(opt) {
+                    opt = $.extend({
+                        handle: "",
+                        cursor: "pointer"
+                    }, opt);
+
+                    if (opt.handle === "") {
+                        var $el = this;
+                    } else {
+                        var $el = this.find(opt.handle);
+                    }
+
+                    return $el.css('cursor', opt.cursor).on("mousedown", function(e) {
+                        if (opt.handle === "") {
+                            var $drag = $(this).addClass('draggable');
+                        } else {
+                            var $drag = $(this).addClass('active-handle').parent().addClass('draggable');
+                        }
+                        var z_idx = $drag.css('z-index'),
+                            drg_h = $drag.outerHeight(),
+                            drg_w = $drag.outerWidth(),
+                            pos_y = $drag.offset().top + drg_h - e.pageY,
+                            pos_x = $drag.offset().left + drg_w - e.pageX;
+                        $drag.css('z-index', 1000).parents().on("mousemove", function(e) {
+                            $('.draggable').offset({
+                                top: e.pageY + pos_y - drg_h,
+                                left: e.pageX + pos_x - drg_w
+                            }).on("mouseup", function() {
+                                $(this).removeClass('draggable').css('z-index', z_idx);
+                            });
+                        });
+                        e.preventDefault(); // disable selection
+                    }).on("mouseup", function() {
+                        if (opt.handle === "") {
+                            $(this).removeClass('draggable');
+                        } else {
+                            $(this).removeClass('active-handle').parent().removeClass('draggable');
+                        }
+                    });
+
+                }
+            })(jQuery);
+            $('.remote-video').drags();
+            $('.local-video').drags();
+        });
+        $('.lineWidth').click(function(e) {
+            $('.linBox').removeClass('hiddenClass');
+        });
+        $('.set').click(function(e) {
+            $('.linBox').addClass('hiddenClass');
+        });
+        $('.recordSession span').click(function(e) {
+            if ($(this).hasClass('srecoring')) {
+                $(this).removeClass('srecoring');
+                $(this).attr('data-original-title', 'Session Record');
+            } else {
+                $(this).addClass('srecoring');
+                $(this).attr('data-original-title', 'Session is recording');
+            }
+        });
+        var h1 = document.getElementsByTagName('time')[0],
+            seconds = 0,
+            minutes = 0,
+            hours = 0,
+            t;
+
+        function add() {
+            seconds++;
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes >= 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+
+            h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+            timer();
+        }
+
+        function timer() {
+            t = setTimeout(add, 1000);
+        }
+        $(document).ready(function(e) {
+            timer();
+        });
+        $('.expand-show1').click(function(e) {
+            $('#local-file-head').css('display', 'none');
+            $('#romote-file-head').removeClass('col-6');
+            $('#FullScreen1').removeClass('expand-show1');
+            $('#FullScreen1').attr('onClick', 'closeExp1()');
+            $('#romote-file-head').addClass('col-12');
+            $(this).attr('data-original-title', 'Close Expand');
+            $('#FullScreen2').attr('data-original-title', 'Expand');
+        });
+        $('.expand-show2').click(function(e) {
+            $('#romote-file-head').css('display', 'none');
+            $('#local-file-head').removeClass('col-6');
+            $('#local-file-head').addClass('col-12');
+            $('#FullScreen2').removeClass('expand-show2');
+            //$('#FullScreen2').addClass('expand2');
+            $('#FullScreen2').attr('onclick', 'closeExp2()');
+            $(this).attr('data-original-title', 'Close Expand');
+            $('#FullScreen1').attr('data-original-title', 'Close Expand');
+        });
+        $('.expand1').click(function(e) {
+
+        });
+
+        function closeExp1() {
+            $('#romote-file-head').removeClass('col-12');
+            $('#romote-file-head').addClass('col-6');
+            $('#local-file-head').removeClass('col-12');
+            $('#local-file-head').addClass('col-6');
+            $('#local-file-head').css('display', 'block');
+            $('#FullScreen1').attr('data-original-title', 'Expand');
+            $('#FullScreen2').attr('data-original-title', 'Expand');
+            $('#FullScreen1').prop('onclick', null);
+            $('#FullScreen2').addClass('expand-show2');
+        }
+
+
+        function closeExp2() {
+            $('#local-file-head').removeClass('col-12');
+            $('#local-file-head').addClass('col-6');
+            $('#romote-file-head').removeClass('col-12');
+            $('#romote-file-head').addClass('col-6');
+            $('#romote-file-head').css('display', 'block');
+            $('#FullScreen1').attr('data-original-title', 'Expand');
+            $('#FullScreen2').attr('data-original-title', 'Expand');
+            $('#FullScreen2').prop('onclick', null);
+            $('#FullScreen2').addClass('expand-show2');
+        }
+
+        $(document).ready(function(e) {
+            var usertimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            $('.zone').html(usertimeZone);
+
+
+            var objToday = new Date(),
+                weekday = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'),
+                dayOfWeek = weekday[objToday.getDay()],
+                domEnder = function() {
+                    var a = objToday;
+                    if (/1/.test(parseInt((a + "").charAt(0)))) return "th";
+                    a = parseInt((a + "").charAt(1));
+                    return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th"
+                }(),
+                dayOfMonth = today + (objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
+                months = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'),
+                curMonth = months[objToday.getMonth()],
+                curYear = objToday.getFullYear(),
+                curHour = objToday.getHours() > 12 ? objToday.getHours() - 12 : (objToday.getHours() < 10 ? "0" + objToday.getHours() : objToday.getHours()),
+                curMinute = objToday.getMinutes() < 10 ? "0" + objToday.getMinutes() : objToday.getMinutes(),
+                curSeconds = objToday.getSeconds() < 10 ? "0" + objToday.getSeconds() : objToday.getSeconds(),
+                curMeridiem = objToday.getHours() > 12 ? "PM" : "AM";
+            var today = dayOfWeek + " " + dayOfMonth + " " + curMonth + ", " + curYear;
+            //$('.crdate').html(today);
+            $('.crdatebotton').html('Date: ' + today);
+
+        });
+
+        function showTime() {
+            var date = new Date();
+            var h = date.getHours(); // 0 - 23
+            var m = date.getMinutes(); // 0 - 59
+            var s = date.getSeconds(); // 0 - 59
+            var session = "AM";
+
+            if (h == 0) {
+                h = 12;
+            }
+
+            if (h > 12) {
+                h = h - 12;
+                session = "PM";
+            }
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + session;
+
+            $('.crdate').text(time);
+
+            setTimeout(showTime, 1000);
+
+        }
+
+        showTime();
+    </script>
+</body>
+
+</html>
